@@ -111,6 +111,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalDependencies>Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -130,7 +131,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="ScreenTimeline.cpp" />
+    <ClCompile Include="WindowsHelper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ScreenTimeline.h" />
+    <ClInclude Include="WindowsHelper.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
